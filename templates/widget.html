@@ -1,0 +1,13 @@
+<div id="mcstatus">
+	<p>{{ server_name }} - {{ server_status }}</p>
+	{% if server_status == "ONLINE" %}
+	<div id="mcplayers">
+		<p>{{ num_players }}</p>
+		<p>Players online:</p>
+		{% for player in players %}
+		<div class="player"><img alt="{{ player }}" src="https://minotar.net/helm/{{ player }}/25.png"></div>
+		{% endfor %}
+	</div>
+	{% endif %}
+</div>
+
